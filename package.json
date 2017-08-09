@@ -1,0 +1,27 @@
+{
+  "name": "@dreipol/scss-utils",
+  "version": "0.0.0",
+  "description": "Dreipol scss util @functions and @mixins",
+  "main": "index.scss",
+  "scripts": {
+    "test": "sass test.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreipol/scss-utils.git"
+  },
+  "keywords": [
+    "sass",
+    "helpers",
+    "scss",
+    "utils",
+    "mixins",
+    "functions"
+  ],
+  "author": "Dreipol <dev@dreipol.ch> (http://dreipol.ch)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreipol/scss-utils/issues"
+  },
+  "homepage": "https://github.com/dreipol/scss-utils#readme"
+}

@@ -1,0 +1,28 @@
+/// Styles touch/hover states according to browser capabilities
+/// @param {boolean} $toggle - State toggle; Available values: `true`, `false` or `default` (for both)
+///
+@mixin dp-has-focus($toggle) {
+    $is-default: ($toggle == default);
+
+    @if ($toggle or $is-default) {
+        @include dp-has-support('touchevents' false) {
+            &:hover, &:focus, &[data-focus] {
+                @content;
+            }
+        }
+
+        @include dp-has-support('touchevents' true) {
+            &:active, &[data-focus] {
+                @content;
+            }
+        }
+    }
+
+    @if ((not $toggle) or $is-default) {
+        @include dp-has-support(default) {
+            & {
+                @content;
+            }
+        }
+    }
+}

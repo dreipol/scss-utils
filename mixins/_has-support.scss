@@ -1,0 +1,35 @@
+/// Styles a block using a Modernizr feature-query string added at the root of the selector
+/// Usage: `@include dp-has-support(<attribute> <bool> | <default-flag>, ...);`
+/// @example scss - Apply style when browser supports `flexbox` but not `calc`:
+///     `@include dp-has-support(flexbox true, csscalc false);`
+///
+@mixin dp-has-support($pairs...) {
+    $feature-list: '';
+    $is-default: false;
+
+    @for $i from 1 through length($pairs) {
+        $pair: nth($pairs, $i);
+
+        $feature: unquote(nth($pair, 1));
+        $is-default-flag: ($feature == default);
+        $expectation: if(length($pair) > 1 and nth($pair, 2), '.', '.no-');
+
+        @if $is-default-flag {
+            $is-default: true;
+        } @else {
+            $feature-list: ($feature-list + '#{$expectation}#{$feature}');
+        }
+    }
+
+    @if $is-default {
+        @include dp-at-root(html) {
+            @content;
+        }
+    }
+
+    @if str-length($feature-list) {
+        @include dp-at-root(html, $feature-list) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+// stylelint-disable selector-no-vendor-prefix
+
+
+/// Add styles to the placeholder element
+///
+@mixin dp-placeholder() {
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+    &::placeholder { @content; }
+}

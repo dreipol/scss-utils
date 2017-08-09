@@ -1,0 +1,17 @@
+/// Concatenates a list using a given separator
+/// @param {List} $list - The list to be concatenated
+/// @param {string} $sep - A separator string to be inserted between items
+/// @return {string} - A string containing list items connected with a separator string
+///
+@function dp-list-concat($list, $sep) {
+    $result: '';
+
+    @each $item in $list {
+        $i: index($list, $item);
+        $local-sep: if($i == 1, '', $sep);
+
+        $result: $result + $local-sep + inspect($item);
+    }
+
+    @return $result;
+}

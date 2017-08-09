@@ -1,0 +1,37 @@
+@import './index';
+
+.test {
+    $test-list: (uno, due, tre);
+    $test-map: (color: red);
+    $test-color: red;
+    // mixins
+    @include dp-at-root('.test');
+    @include dp-has-focus(true);
+    @include dp-has-support(flexbox);
+    @include dp-hide-text;
+    @include dp-hide-visually;
+    @include dp-ios-native-scrolling;
+    @include dp-is-selectable(true);
+    @include dp-is-visible(true, 200);
+    @include dp-last-row(2);
+    @include dp-overlay;
+    @include dp-placeholder;
+    @include dp-size(200);
+    @include dp-text-ellipsis;
+
+    // functions
+    $test1: dp-color-shade( $test-color, 10);
+    $test2: dp-color-tint( $test-color, 10);
+    $test3: dp-list-concat($test-list, ',');
+    $test4: dp-list-contains($test-list, uno);
+    $test5: dp-list-expand-directions($test-list);
+    $test6: dp-list-purge($test-list);
+    $test7: dp-map-assign($test-map);
+    $test8: dp-map-deep-get($test-map, 'color');
+    $test9: dp-selector-get-element-name('.test');
+    $test10: dp-str-replace('test', 'st', 'oo');
+    $test11: dp-str-split('test');
+    $test12: dp-strip-unit(3);
+    $test13: dp-svg--create(10, 10, 'foo');
+    $test14: dp-transition--props('all 300ms linear');
+}
