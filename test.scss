@@ -4,10 +4,11 @@
     $test-list: (uno, due, tre);
     $test-map: (color: red);
     $test-color: red;
+
     // mixins
     @include dp-at-root('.test');
     @include dp-has-focus(true);
-    @include dp-has-support(flexbox);
+    @include dp-has-support((flexbox: true));
     @include dp-hide-text;
     @include dp-hide-visually;
     @include dp-ios-native-scrolling;
