@@ -11,7 +11,7 @@
     }
 
     @if str-length($feature-list) {
-        @include at-root(html, $feature-list) {
+        @include dp-at-root(html, $feature-list) {
             @content;
         }
     }
