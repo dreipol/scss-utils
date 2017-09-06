@@ -2,9 +2,10 @@
   "name": "@dreipol/scss-utils",
   "version": "0.0.0",
   "description": "Dreipol scss util @functions and @mixins",
-  "main": "index.scss",
+  "main": "_index.scss",
   "scripts": {
-    "test": "sass test.scss"
+    "test": "sass test.scss",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
