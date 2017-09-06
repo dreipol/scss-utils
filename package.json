@@ -19,7 +19,11 @@
     "mixins",
     "functions"
   ],
-  "author": "Dreipol <dev@dreipol.ch> (http://dreipol.ch)",
+  "author": {
+    "name": "dreipol GmbH",
+    "email": "hello@dreipol.ch",
+    "url": "http://dreipol.ch"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dreipol/scss-utils/issues"
