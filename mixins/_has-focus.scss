@@ -5,13 +5,13 @@
     $is-default: ($toggle == default);
 
     @if ($toggle or $is-default) {
-        @include dp-has-support('touchevents' false) {
+        @include dp-has-support((touchevents: false)) {
             &:hover, &:focus, &[data-focus] {
                 @content;
             }
         }
 
-        @include dp-has-support('touchevents' true) {
+        @include dp-has-support((touchevents: true)) {
             &:active, &[data-focus] {
                 @content;
             }
@@ -19,7 +19,7 @@
     }
 
     @if ((not $toggle) or $is-default) {
-        @include dp-has-support(default) {
+        @include dp-at-root(html) {
             & {
                 @content;
             }

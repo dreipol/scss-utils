@@ -6,6 +6,12 @@ Dreipol scss util @functions and @mixins
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
+# Installation
+
+```bash
+npm i @dreipol/scss-utils -S
+```
+
 # Documentation
 
 TODO
