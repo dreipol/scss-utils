@@ -4,7 +4,8 @@
   "description": "Dreipol scss util @functions and @mixins",
   "main": "_index.scss",
   "scripts": {
-    "test": "sass test.scss",
+    "test": "npm run lint && sass test.scss",
+    "lint": "stylelint **/*.scss",
     "prepublish": "npm run test"
   },
   "repository": {
@@ -23,6 +24,10 @@
     "name": "dreipol GmbH",
     "email": "hello@dreipol.ch",
     "url": "http://dreipol.ch"
+  },
+  "devDependencies": {
+    "@dreipol/stylelint-config": "^2.0.2",
+    "stylelint": "^8.0.0"
   },
   "license": "MIT",
   "bugs": {

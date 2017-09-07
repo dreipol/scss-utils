@@ -2,7 +2,8 @@
 /// @param {boolean} $toggle - State toggle
 ///
 @mixin dp-is-selectable($toggle) {
-    $c--label-selection: #ACCEF7 !default; // provide a fallback value
+    $c--label-selection: #accef7 !default; // provide a fallback value
+
     @if $toggle {
         & {
             -webkit-touch-callout: text;
