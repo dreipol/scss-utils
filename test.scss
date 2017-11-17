@@ -33,6 +33,6 @@
     $test10: dp-str-replace('test', 'st', 'oo');
     $test11: dp-str-split('test');
     $test12: dp-strip-unit(3);
-    $test13: dp-svg--create(10, 10, 'foo');
-    $test14: dp-transition--props('all 300ms linear');
+    $test13: dp-svg-create(10, 10, 'foo');
+    $test14: dp-transition-props('all 300ms linear');
 }
