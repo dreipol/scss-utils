@@ -6,7 +6,7 @@
     $test-map: (color: red);
     $test-color: red;
 
-    // mixins
+    // Prefixed mixins
     @include dp-at-root('.test');
     @include dp-has-focus(true);
     @include dp-has-support((flexbox: true));
@@ -20,6 +20,21 @@
     @include dp-placeholder;
     @include dp-size(200);
     @include dp-text-ellipsis;
+
+    // Unprefixed mixins
+    @include at-root('.test');
+    @include has-focus(true);
+    @include has-support((flexbox: true));
+    @include hide-text;
+    @include hide-visually;
+    @include ios-native-scrolling;
+    @include is-selectable(true);
+    @include is-visible(true, 200);
+    @include last-row(2);
+    @include overlay;
+    @include placeholder;
+    @include size(200);
+    @include text-ellipsis;
 
     // Prefixed functions
     $test-prefixed: (
