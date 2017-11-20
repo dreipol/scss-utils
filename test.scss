@@ -1,4 +1,5 @@
 @import './index';
+@import './unprefixed/index';
 
 .test {
     $test-list: (uno, due, tre);
@@ -20,19 +21,46 @@
     @include dp-size(200);
     @include dp-text-ellipsis;
 
-    // functions
-    $test1: dp-color-shade( $test-color, 10);
-    $test2: dp-color-tint( $test-color, 10);
-    $test3: dp-list-concat($test-list, ',');
-    $test4: dp-list-contains($test-list, uno);
-    $test5: dp-list-expand-directions($test-list);
-    $test6: dp-list-purge($test-list);
-    $test7: dp-map-assign($test-map);
-    $test8: dp-map-deep-get($test-map, 'color');
-    $test9: dp-selector-get-element-name('.test');
-    $test10: dp-str-replace('test', 'st', 'oo');
-    $test11: dp-str-split('test');
-    $test12: dp-strip-unit(3);
-    $test13: dp-svg-create(10, 10, 'foo');
-    $test14: dp-transition-props('all 300ms linear');
+    // Prefixed functions
+    $test-prefixed: (
+        't-1': dp-color-shade($test-color, 10),
+        't-2': dp-color-tint($test-color, 10),
+        't-3': dp-list-concat($test-list, ','),
+        't-4': dp-list-contains($test-list, uno),
+        't-5': dp-list-expand-directions($test-list),
+        't-6': dp-list-purge($test-list),
+        't-7': dp-map-assign($test-map),
+        't-8': dp-map-deep-get($test-map, 'color'),
+        't-9': dp-selector-get-element-name('.test'),
+        't-10': dp-str-replace('test', 'st', 'oo'),
+        't-11': dp-str-split('test'),
+        't-12': dp-strip-unit(3),
+        't-13': dp-transition-props('all 300ms linear'),
+    );
+
+    // Unprefixed functions
+    $test-unprefixed: (
+        't-1': color-shade($test-color, 10),
+        't-2': color-tint($test-color, 10),
+        't-3': list-concat($test-list, ','),
+        't-4': list-contains($test-list, uno),
+        't-5': list-expand-directions($test-list),
+        't-6': list-purge($test-list),
+        't-7': map-assign($test-map),
+        't-8': map-deep-get($test-map, 'color'),
+        't-9': selector-get-element-name('.test'),
+        't-10': str-replace('test', 'st', 'oo'),
+        't-11': str-split('test'),
+        't-12': strip-unit(3),
+        't-13': transition-props('all 300ms linear'),
+    );
+
+    @for $i from 1 through 14 {
+        $prefixed: map-get($test-prefixed, 't-#{$i}');
+        $unprefixed: map-get($test-unprefixed, 't-#{$i}');
+
+        @if ($prefixed != $unprefixed) {
+            @error 'Comparison test ##{$i} failing! - Prefixed: #{$prefixed} Unprefixed: #{$unprefixed}';
+        }
+    }
 }

@@ -1,0 +1,54 @@
+@import '../functions';
+
+
+@function color-shade($args...) {
+    @return dp-color-shade($args...);
+}
+
+@function color-tint($args...) {
+    @return dp-color-tint($args...);
+}
+
+@function list-concat($args...) {
+    @return dp-list-concat($args...);
+}
+
+@function list-contains($args...) {
+    @return dp-list-contains($args...);
+}
+
+@function list-expand-directions($args...) {
+    @return dp-list-expand-directions($args...);
+}
+
+@function list-purge($args...) {
+    @return dp-list-purge($args...);
+}
+
+@function map-assign($args...) {
+    @return dp-map-assign($args...);
+}
+
+@function map-deep-get($args...) {
+    @return dp-map-deep-get($args...);
+}
+
+@function selector-get-element-name($args...) {
+    @return dp-selector-get-element-name($args...);
+}
+
+@function str-replace($args...) {
+    @return dp-str-replace($args...);
+}
+
+@function str-split($args...) {
+    @return dp-str-split($args...);
+}
+
+@function strip-unit($args...) {
+    @return dp-strip-unit($args...);
+}
+
+@function transition-props($args...) {
+    @return dp-transition-props($args...);
+}
