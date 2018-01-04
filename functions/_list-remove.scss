@@ -1,0 +1,9 @@
+/// Remove a value from a list
+/// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#removing-values-from-list
+/// @param {List} $list - The input list
+/// @param {*} $value - The term to be removed
+/// @return {*} - The list's first item
+///
+@function dp-list-remove($list, $value) {
+    @return dp-list-replace($list, $value);
+}

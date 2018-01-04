@@ -7,7 +7,7 @@
     $result: ();
 
     @each $item in $list {
-        @if $item != null and $item != false and $item != "" {
+        @if dp-is-truthy($item) {
             $result: append($result, $item);
         }
     }
