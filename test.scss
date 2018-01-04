@@ -2,9 +2,9 @@
 @import './unprefixed/index';
 
 .test {
-    $test-list: (uno, due, tre);
-    $test-map: (color: red);
-    $test-color: red;
+    $test-list: (foo, bar, baz);
+    $test-map: (foo: bar);
+    $test-color: blue;
 
     // Prefixed mixins
     @include dp-at-root('.test');
@@ -40,42 +40,98 @@
     $test-prefixed: (
         't-1': dp-color-shade($test-color, 10),
         't-2': dp-color-tint($test-color, 10),
-        't-3': dp-list-concat($test-list, ','),
-        't-4': dp-list-contains($test-list, uno),
-        't-5': dp-list-expand-directions($test-list),
-        't-6': dp-list-purge($test-list),
-        't-7': dp-map-assign($test-map),
-        't-8': dp-map-deep-get($test-map, 'color'),
-        't-9': dp-selector-get-element-name('.test'),
-        't-10': dp-str-replace('test', 'st', 'oo'),
-        't-11': dp-str-split('test'),
-        't-12': dp-strip-unit(3),
-        't-13': dp-transition-props('all 300ms linear'),
+        't-3': dp-is-truthy('foo'),
+        't-4': dp-list-concat($test-list, ','),
+        't-5': dp-list-contains($test-list, foo),
+        't-6': dp-list-expand-directions($test-list),
+        't-7': dp-list-first($test-list),
+        't-8': dp-list-insert-nth($test-list, 2, qux),
+        't-9': dp-list-last($test-list),
+        't-10': dp-list-last-index($test-list, bar),
+        't-11': dp-list-prepend($test-list, qux),
+        't-12': dp-list-purge($test-list),
+        't-13': dp-list-remove($test-list, foo),
+        't-14': dp-list-remove-nth($test-list, 1),
+        't-15': dp-list-replace($test-list, foo, qux),
+        't-16': dp-list-replace-nth($test-list, 1, qux),
+        't-17': dp-list-slice($test-list, 2, 3),
+        't-18': dp-map-assign($test-map),
+        't-19': dp-map-deep-get($test-map, 'color'),
+        't-20': dp-selector-get-element-name('.test'),
+        't-21': dp-str-replace('test', 'st', 'oo'),
+        't-22': dp-str-split('test'),
+        't-23': dp-strip-unit(3),
+        't-24': dp-transition-props('all 300ms linear'),
     );
 
     // Unprefixed functions
     $test-unprefixed: (
         't-1': color-shade($test-color, 10),
         't-2': color-tint($test-color, 10),
-        't-3': list-concat($test-list, ','),
-        't-4': list-contains($test-list, uno),
-        't-5': list-expand-directions($test-list),
-        't-6': list-purge($test-list),
-        't-7': map-assign($test-map),
-        't-8': map-deep-get($test-map, 'color'),
-        't-9': selector-get-element-name('.test'),
-        't-10': str-replace('test', 'st', 'oo'),
-        't-11': str-split('test'),
-        't-12': strip-unit(3),
-        't-13': transition-props('all 300ms linear'),
+        't-3': is-truthy('foo'),
+        't-4': list-concat($test-list, ','),
+        't-5': list-contains($test-list, foo),
+        't-6': list-expand-directions($test-list),
+        't-7': list-first($test-list),
+        't-8': list-insert-nth($test-list, 2, qux),
+        't-9': list-last($test-list),
+        't-10': list-last-index($test-list, bar),
+        't-11': list-prepend($test-list, qux),
+        't-12': list-purge($test-list),
+        't-13': list-remove($test-list, foo),
+        't-14': list-remove-nth($test-list, 1),
+        't-15': list-replace($test-list, foo, qux),
+        't-16': list-replace-nth($test-list, 1, qux),
+        't-17': list-slice($test-list, 2, 3),
+        't-18': map-assign($test-map),
+        't-19': map-deep-get($test-map, 'color'),
+        't-20': selector-get-element-name('.test'),
+        't-21': str-replace('test', 'st', 'oo'),
+        't-22': str-split('test'),
+        't-23': strip-unit(3),
+        't-24': transition-props('all 300ms linear'),
+    );
+
+    @debug $test-prefixed;
+
+    $test-fixtures: (
+        't-1': #0000e6,
+        't-2': #1a1aff,
+        't-3': true,
+        't-4': 'foo,bar,baz',
+        't-5': true,
+        't-6': (foo, bar, baz, bar),
+        't-7': foo,
+        't-8': foo qux bar baz,
+        't-9': baz,
+        't-10': 2,
+        't-11': (qux, foo, bar, baz),
+        't-12': foo bar baz,
+        't-13': bar baz,
+        't-14': bar baz,
+        't-15': qux bar baz,
+        't-16': qux bar baz,
+        't-17': bar baz,
+        't-18': (foo: bar),
+        't-19': null,
+        't-20': 'test',
+        't-21': 'teoo',
+        't-22': 't' 'e' 's' 't',
+        't-23': 3,
+        't-24': (),
     );
 
     @for $i from 1 through 14 {
+        $fixture: map-get($test-fixtures, 't-#{$i}');
         $prefixed: map-get($test-prefixed, 't-#{$i}');
         $unprefixed: map-get($test-unprefixed, 't-#{$i}');
 
         @if ($prefixed != $unprefixed) {
-            @error 'Comparison test ##{$i} failing! - Prefixed: #{$prefixed} Unprefixed: #{$unprefixed}';
+            @error 'Comparison test ##{$i} failing! - Prefixed: #{$prefixed} ~vs~ Unprefixed: #{$unprefixed}';
+        }
+
+        @if ($prefixed != $fixture) {
+            @error 'Comparison test ##{$i} failing! - Fixture: #{$fixture} ~vs~ Prefixed: #{$prefixed}';
         }
     }
 }

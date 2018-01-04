@@ -9,6 +9,10 @@
     @return dp-color-tint($args...);
 }
 
+@function is-truthy($args...) {
+    @return dp-is-truthy($args...);
+}
+
 @function list-concat($args...) {
     @return dp-list-concat($args...);
 }
@@ -21,8 +25,48 @@
     @return dp-list-expand-directions($args...);
 }
 
+@function list-first($args...) {
+    @return dp-list-first($args...);
+}
+
+@function list-insert-nth($args...) {
+    @return dp-list-insert-nth($args...);
+}
+
+@function list-last($args...) {
+    @return dp-list-last($args...);
+}
+
+@function list-last-index($args...) {
+    @return dp-list-last-index($args...);
+}
+
+@function list-prepend($args...) {
+    @return dp-list-prepend($args...);
+}
+
 @function list-purge($args...) {
     @return dp-list-purge($args...);
+}
+
+@function list-remove($args...) {
+    @return dp-list-remove($args...);
+}
+
+@function list-remove-nth($args...) {
+    @return dp-list-remove-nth($args...);
+}
+
+@function list-replace($args...) {
+    @return dp-list-replace($args...);
+}
+
+@function list-replace-nth($args...) {
+    @return dp-list-replace-nth($args...);
+}
+
+@function list-slice($args...) {
+    @return dp-list-slice($args...);
 }
 
 @function map-assign($args...) {
