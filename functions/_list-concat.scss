@@ -4,8 +4,12 @@
 /// @param {string} $glue - A separator string to be inserted between items
 /// @return {string} - A string containing list items connected with a separator string
 ///
-@function dp-list-concat($list, $glue) {
+@function dp-list-concat($list, $glue: '') {
     $result: null;
+
+    @if length($list) == 0 {
+        @return '';
+    }
 
     @for $i from 1 through length($list) {
         $e: nth($list, $i);
