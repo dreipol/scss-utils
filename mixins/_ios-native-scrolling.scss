@@ -1,3 +1,6 @@
+/// Add ios native overflow scrolling to an element
+/// @param {string} $orientation - The scroll direction
+///
 @mixin dp-ios-native-scrolling($orientation: y) {
     -webkit-overflow-scrolling: touch;
 
