@@ -121,7 +121,7 @@
         't-24': (),
     );
 
-    @for $i from 1 through 14 {
+    @for $i from 1 through length($test-fixtures) {
         $fixture: map-get($test-fixtures, 't-#{$i}');
         $prefixed: map-get($test-prefixed, 't-#{$i}');
         $unprefixed: map-get($test-unprefixed, 't-#{$i}');
