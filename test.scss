@@ -61,7 +61,8 @@
         't-21': dp-str-replace('test', 'st', 'oo'),
         't-22': dp-str-split('test'),
         't-23': dp-strip-unit(3),
-        't-24': dp-transition-props('all 300ms linear'),
+        't-24': dp-to-string(foo),
+        't-25': dp-transition-props('all 300ms linear'),
     );
 
     // Unprefixed functions
@@ -89,7 +90,8 @@
         't-21': str-replace('test', 'st', 'oo'),
         't-22': str-split('test'),
         't-23': strip-unit(3),
-        't-24': transition-props('all 300ms linear'),
+        't-24': to-string(foo),
+        't-25': transition-props('all 300ms linear'),
     );
 
     $test-fixtures: (
@@ -116,7 +118,8 @@
         't-21': 'teoo',
         't-22': 't' 'e' 's' 't',
         't-23': 3,
-        't-24': (),
+        't-24': 'foo',
+        't-25': (),
     );
 
     @for $i from 1 through length($test-fixtures) {
