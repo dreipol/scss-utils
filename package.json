@@ -26,8 +26,8 @@
     "url": "http://dreipol.ch"
   },
   "devDependencies": {
-    "@dreipol/stylelint-config": "^2.0.2",
-    "stylelint": "^8.0.0"
+    "@dreipol/stylelint-config": "^3.0.0",
+    "stylelint": "^9.3.0"
   },
   "license": "MIT",
   "bugs": {
