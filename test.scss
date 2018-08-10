@@ -92,8 +92,6 @@
         't-24': transition-props('all 300ms linear'),
     );
 
-    @debug $test-prefixed;
-
     $test-fixtures: (
         't-1': #0000e6,
         't-2': #1a1aff,
