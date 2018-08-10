@@ -93,6 +93,10 @@
     @return dp-strip-unit($args...);
 }
 
+@function to-string($args...) {
+    @return dp-to-string($args...);
+}
+
 @function transition-props($args...) {
     @return dp-transition-props($args...);
 }
