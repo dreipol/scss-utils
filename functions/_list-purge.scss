@@ -1,3 +1,5 @@
+@import './is-truthy';
+
 /// Removes all non-true values from a list
 /// @link http://hugogiraudel.com/2013/10/09/advanced-sass-list-functions-again/
 /// @param {List} $list - A list containing possibly falsy values

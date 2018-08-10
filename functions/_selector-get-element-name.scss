@@ -1,3 +1,5 @@
+@import './str-split';
+
 /// Remove classes, pseudo-classes and attributes from a selector part
 /// @param {string} $selector - The selector part to be cleaned
 /// @return {string}
