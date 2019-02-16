@@ -1,3 +1,5 @@
+@import '../functions/selector-get-element-name';
+
 /// Use `@at-root` while adding classes (or attributes) `$classes` to an element node `$append-target`.
 /// If the element was not found a standard `@at-root` is used.
 /// @param {string} $append-target - $append-target string to append the classes (or attributes) to
