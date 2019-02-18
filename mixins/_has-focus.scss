@@ -1,3 +1,4 @@
+// stylelint-disable scss/media-feature-value-dollar-variable
 /// Styles touch/hover states according to browser capabilities
 /// @param {boolean} $toggle - State toggle; Available values: `true`, `false` or `default` (for both)
 ///
@@ -5,16 +6,16 @@
     $is-default: ($toggle == default);
 
     @if ($toggle or $is-default) {
-        @include dp-has-support((touchevents: false)) {
-            &:hover, &:focus, &[data-focus] {
+        // the ms-directives are needed to target IE
+        // TODO: remember to remove them when IE will be no long supported
+        @media screen and (hover: hover), (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            &:hover, &:focus {
                 @content;
             }
         }
 
-        @include dp-has-support((touchevents: true)) {
-            &:active, &[data-focus] {
-                @content;
-            }
+        &:active {
+            @content;
         }
     }
 
