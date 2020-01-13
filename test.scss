@@ -4,7 +4,7 @@
 .test {
     $test-list: (foo, bar, baz);
     $test-map: (foo: bar);
-    $test-color: blue;
+    $test-color: #0000ff;
 
     // Prefixed mixins
     @include dp-at-root('.test');
@@ -35,6 +35,8 @@
     @include placeholder;
     @include size(200);
     @include text-ellipsis;
+    @include supports-hover;
+    @include supports-touch;
 
     // Prefixed functions
     $test-prefixed: (
@@ -63,6 +65,8 @@
         't-23': dp-strip-unit(3),
         't-24': dp-to-string(foo),
         't-25': dp-transition-props('all 300ms linear'),
+        't-26': dp-supports-hover(),
+        't-27': dp-supports-touch(),
     );
 
     // Unprefixed functions
@@ -92,6 +96,8 @@
         't-23': strip-unit(3),
         't-24': to-string(foo),
         't-25': transition-props('all 300ms linear'),
+        't-26': supports-hover(),
+        't-27': supports-touch(),
     );
 
     $test-fixtures: (
