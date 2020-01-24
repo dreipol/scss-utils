@@ -1,0 +1,7 @@
+// https://docs.w3cub.com/css/@media/any-hover/
+@mixin dp-supports-hover() {
+    /* one or more available input mechanism(s) can hover over elements with ease */
+    @media (any-hover: hover) {
+        @content;
+    }
+}

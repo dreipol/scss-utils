@@ -1,0 +1,6 @@
+@mixin dp-supports-touch() {
+    /* one or more available input mechanism(s) cannot hover or there are no pointing input mechanisms */
+    @media (any-hover: none) {
+        @content;
+    }
+}

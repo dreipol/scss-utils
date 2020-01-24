@@ -62,3 +62,11 @@
 @mixin text-ellipsis($args...) {
     @include dp-text-ellipsis($args...);
 }
+
+@mixin supports-hover($args...) {
+    @include dp-supports-hover($args...);
+}
+
+@mixin supports-touch($args...) {
+    @include dp-supports-touch($args...);
+}
