@@ -58,9 +58,13 @@
 }
 
 @mixin supports-hover($args...) {
-    @include dp-supports-hover($args...);
+    @include dp-supports-hover($args...) {
+        @content;
+    }
 }
 
 @mixin supports-touch($args...) {
-    @include dp-supports-touch($args...);
+    @include dp-supports-touch($args...) {
+        @content;
+    }
 }
