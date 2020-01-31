@@ -7,18 +7,6 @@
     }
 }
 
-@mixin has-focus($args...) {
-    @include dp-has-focus($args...) {
-        @content;
-    }
-}
-
-@mixin has-support($args...) {
-    @include dp-has-support($args...) {
-        @content;
-    }
-}
-
 @mixin hide-text($args...) {
     @include dp-hide-text($args...);
 }

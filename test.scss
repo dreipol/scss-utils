@@ -8,8 +8,6 @@
 
     // Prefixed mixins
     @include dp-at-root('.test');
-    @include dp-has-focus(true);
-    @include dp-has-support((flexbox: true));
     @include dp-hide-text;
     @include dp-hide-visually;
     @include dp-ios-native-scrolling;
@@ -23,8 +21,6 @@
 
     // Unprefixed mixins
     @include at-root('.test');
-    @include has-focus(true);
-    @include has-support((flexbox: true));
     @include hide-text;
     @include hide-visually;
     @include ios-native-scrolling;
