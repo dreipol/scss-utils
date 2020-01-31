@@ -1,6 +1,6 @@
 {
   "name": "@dreipol/scss-utils",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Dreipol scss util @functions and @mixins",
   "main": "_index.scss",
   "scripts": {
