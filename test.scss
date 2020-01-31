@@ -7,6 +7,7 @@
     $test-color: #0000ff;
 
     // Prefixed mixins
+    @include dp-has-focus;
     @include dp-at-root('.test');
     @include dp-hide-text;
     @include dp-hide-visually;
@@ -20,6 +21,7 @@
     @include dp-text-ellipsis;
 
     // Unprefixed mixins
+    @include has-focus;
     @include at-root('.test');
     @include hide-text;
     @include hide-visually;

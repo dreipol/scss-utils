@@ -1,7 +1,10 @@
 // https://docs.w3cub.com/css/@media/any-hover/
 @mixin dp-supports-hover() {
     /* one or more available input mechanism(s) can hover over elements with ease */
-    @media (any-hover: hover) {
+    // The `-ms-high-contrast` directives are needed to target Internet Explorer 10 and 11
+    // @link https://stackoverflow.com/q/28417056/1602864
+    // TODO: Remove the `-ms-high-contrast` directives when IE will no longer be supported
+    @media (any-hover: hover), (-ms-high-contrast: active), (-ms-high-contrast: none) {
         @content;
     }
 }
