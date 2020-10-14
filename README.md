@@ -10,13 +10,19 @@ dreipol scss util @functions and @mixins
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
-# Installation
+# Documentation
+
+The of all the exported modules is online available https://www.dreipol.dev/scss-utils/
+
+# Usage 
+
+## Installation
 
 ```bash
 npm i @dreipol/scss-utils -S
 ```
 
-# Documentation 
+## Import
 
 These utils are built as sass modules. You can import them in your sass files simply using the `@use` rule for example:
 
@@ -48,10 +54,6 @@ a {
     @include mixins.hide-visually;
 } 
 ```
-
-## API
-
-The of all the exported modules is online available https://www.dreipol.dev/scss-utils/
 
 
 [travis-image]:https://img.shields.io/travis/dreipol/scss-utils.svg?style=flat-square
