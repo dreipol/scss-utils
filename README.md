@@ -1,5 +1,9 @@
 # scss-utils
-Dreipol scss util @functions and @mixins
+
+<img src="https://raw.githubusercontent.com/dreipol/scss-utils/master/logo.jpg" width="50%"/>
+
+dreipol scss util @functions and @mixins
+
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-version-image]][npm-url]
@@ -12,7 +16,7 @@ Dreipol scss util @functions and @mixins
 npm i @dreipol/scss-utils -S
 ```
 
-# Documentation
+# Documentation 
 
 These utils are built as sass modules. You can import them in your sass files simply using the `@use` rule for example:
 
@@ -44,6 +48,10 @@ a {
     @include mixins.hide-visually;
 } 
 ```
+
+## API
+
+The of all the exported modules is online available https://www.dreipol.dev/scss-utils/
 
 
 [travis-image]:https://img.shields.io/travis/dreipol/scss-utils.svg?style=flat-square
