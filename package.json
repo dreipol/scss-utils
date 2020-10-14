@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run lint && npx sass test.scss",
     "lint": "stylelint **/*.scss",
-    "doc": "npx sassdoc functions mixins --dest doc",
+    "doc": "npx sassdoc functions mixins --dest docs",
     "prepublish": "npm run doc && npm run test"
   },
   "repository": {
