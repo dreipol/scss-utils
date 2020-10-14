@@ -80,10 +80,10 @@
 
     @for $i from 1 through length($test-expected) {
         $expected: map-get($test-expected, 't-#{$i}');
-        $test: map-get($methods, 't-#{$i}');
+        $result: map-get($methods, 't-#{$i}');
 
-        @if $test != $expected {
-            @error 'Test ##{$i} failing! - "#{$test}" != "#{$expected}"';
+        @if $result != $expected {
+            @error 'Test ##{$i} failing! - "#{$result}" != "#{$expected}"';
         }
     }
 }
