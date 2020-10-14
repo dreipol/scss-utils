@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run lint && npx sass test.scss",
     "lint": "stylelint **/*.scss",
-    "prepublish": "npm run test"
+    "doc": "npx sassdoc functions mixins --dest doc",
+    "prepublish": "npm run doc && npm run test"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "@dreipol/stylelint-config-order": "^4.0.0",
     "@dreipol/stylelint-config-scss": "^3.0.0",
     "node-sass": "^4.14.1",
+    "sassdoc": "^2.7.3",
     "stylelint": "^13.7.2",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
