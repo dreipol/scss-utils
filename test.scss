@@ -50,34 +50,6 @@
         't-25': utils.transition-props('all 300ms linear'),
     );
 
-    $test-fixtures: (
-        't-1': #0000e6,
-        't-2': #1a1aff,
-        't-3': true,
-        't-4': 'foo,bar,baz',
-        't-5': true,
-        't-6': (foo, bar, baz, bar),
-        't-7': foo,
-        't-8': foo qux bar baz,
-        't-9': baz,
-        't-10': 2,
-        't-11': (qux, foo, bar, baz),
-        't-12': foo bar baz,
-        't-13': bar baz,
-        't-14': bar baz,
-        't-15': qux bar baz,
-        't-16': qux bar baz,
-        't-17': bar baz,
-        't-18': (foo: bar),
-        't-19': null,
-        't-20': 'test',
-        't-21': 'teoo',
-        't-22': 't' 'e' 's' 't',
-        't-23': 3,
-        't-24': 'foo',
-        't-25': (),
-    );
-
     $test-expected: (
         't-1': #0000e6,
         't-2': #1a1aff,
@@ -106,8 +78,7 @@
         't-25': (),
     );
 
-    @for $i from 1 through length($test-fixtures) {
-        $fixture: map-get($test-fixtures, 't-#{$i}');
+    @for $i from 1 through length($test-expected) {
         $expected: map-get($test-expected, 't-#{$i}');
         $test: map-get($methods, 't-#{$i}');
 
