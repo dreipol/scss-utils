@@ -1,4 +1,4 @@
-@use './str-split' as *;
+@use 'str-split' as *;
 
 /// Remove classes, pseudo-classes and attributes from a selector part
 /// @param {string} $selector - The selector part to be cleaned

@@ -1,6 +1,6 @@
 // stylelint-disable scss/no-duplicate-dollar-variables
 
-@use './is-truthy' as *;
+@use 'is-truthy' as *;
 
 /// Replace a value within a list by index
 /// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#replacing-values-from-list
