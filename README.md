@@ -1,14 +1,14 @@
-# scss-utils
-
 <img src="https://raw.githubusercontent.com/dreipol/scss-utils/master/logo.jpg" width="50%"/>
-
-dreipol scss util @functions and @mixins
-
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
+
+# scss-utils
+
+dreipol scss util @functions and @mixins
+
 
 # Documentation
 
