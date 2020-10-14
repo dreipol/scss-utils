@@ -1,6 +1,6 @@
 language: ruby
 node_js:
-  - "7.4"
+  - "12"
 
 cache:
   bundler: true
