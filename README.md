@@ -14,7 +14,7 @@ npm i @dreipol/scss-utils -S
 
 # Documentation
 
-TODO
+These utils are built using the sass modules built in
 
 
 [travis-image]:https://img.shields.io/travis/dreipol/scss-utils.svg?style=flat-square
