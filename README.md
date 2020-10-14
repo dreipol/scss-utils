@@ -12,7 +12,7 @@ dreipol scss util @functions and @mixins
 
 # Documentation
 
-The of all the exported modules is online available https://www.dreipol.dev/scss-utils/
+https://www.dreipol.dev/scss-utils/
 
 # Usage 
 
