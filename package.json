@@ -1,6 +1,6 @@
 {
   "name": "@dreipol/scss-utils",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Dreipol scss util @functions and @mixins",
   "main": "_index.scss",
   "scripts": {
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/dreipol/scss-utils.git"
   },
-  "files": ["functions", "mixins"],
+  "files": [
+    "functions",
+    "mixins"
+  ],
   "keywords": [
     "sass",
     "helpers",
