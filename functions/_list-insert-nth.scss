@@ -7,7 +7,7 @@
 /// @param {*} $value - The term to be added
 /// @return {*} - The output list
 ///
-@function dp-list-insert-nth($list, $index, $value) {
+@function list-insert-nth($list, $index, $value) {
     $result: null;
 
     @if type-of($index) != number {

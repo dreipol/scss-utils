@@ -4,7 +4,7 @@
 /// @param {*} $value - The search term
 /// @return {number} - The index of the search term's last occurrence within the list
 ///
-@function dp-list-last-index($list, $value) {
+@function list-last-index($list, $value) {
     $result: null;
 
     @for $i from 1 through length($list) {

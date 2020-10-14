@@ -1,5 +1,4 @@
-@import './index';
-@import './unprefixed/index';
+@use './index' as utils;
 
 .test {
     $test-list: (foo, bar, baz);
@@ -7,95 +6,48 @@
     $test-color: #0000ff;
 
     // Prefixed mixins
-    @include dp-has-focus;
-    @include dp-at-root('.test');
-    @include dp-hide-text;
-    @include dp-hide-visually;
-    @include dp-ios-native-scrolling;
-    @include dp-is-selectable(true);
-    @include dp-is-visible(true, 200);
-    @include dp-last-row(2);
-    @include dp-overlay;
-    @include dp-placeholder;
-    @include dp-size(200);
-    @include dp-text-ellipsis;
-
-    // Unprefixed mixins
-    @include has-focus;
-    @include at-root('.test');
-    @include hide-text;
-    @include hide-visually;
-    @include ios-native-scrolling;
-    @include is-selectable(true);
-    @include is-visible(true, 200);
-    @include last-row(2);
-    @include overlay;
-    @include placeholder;
-    @include size(200);
-    @include text-ellipsis;
-    @include supports-hover;
-    @include supports-touch;
+    @include utils.has-focus;
+    @include utils.at-root('.test');
+    @include utils.hide-text;
+    @include utils.hide-visually;
+    @include utils.ios-native-scrolling;
+    @include utils.is-selectable(true);
+    @include utils.is-visible(true, 200);
+    @include utils.last-row(2);
+    @include utils.overlay;
+    @include utils.placeholder;
+    @include utils.size(200);
+    @include utils.text-ellipsis;
+    @include utils.supports-hover;
+    @include utils.supports-touch;
 
     // Prefixed functions
-    $test-prefixed: (
-        't-1': dp-color-shade($test-color, 10),
-        't-2': dp-color-tint($test-color, 10),
-        't-3': dp-is-truthy('foo'),
-        't-4': dp-list-concat($test-list, ','),
-        't-5': dp-list-contains($test-list, foo),
-        't-6': dp-list-expand-directions($test-list),
-        't-7': dp-list-first($test-list),
-        't-8': dp-list-insert-nth($test-list, 2, qux),
-        't-9': dp-list-last($test-list),
-        't-10': dp-list-last-index($test-list, bar),
-        't-11': dp-list-prepend($test-list, qux),
-        't-12': dp-list-purge($test-list),
-        't-13': dp-list-remove($test-list, foo),
-        't-14': dp-list-remove-nth($test-list, 1),
-        't-15': dp-list-replace($test-list, foo, qux),
-        't-16': dp-list-replace-nth($test-list, 1, qux),
-        't-17': dp-list-slice($test-list, 2, 3),
-        't-18': dp-map-assign($test-map),
-        't-19': dp-map-deep-get($test-map, 'color'),
-        't-20': dp-selector-get-element-name('.test'),
-        't-21': dp-str-replace('test', 'st', 'oo'),
-        't-22': dp-str-split('test'),
-        't-23': dp-strip-unit(3),
-        't-24': dp-to-string(foo),
-        't-25': dp-transition-props('all 300ms linear'),
-        't-26': dp-supports-hover(),
-        't-27': dp-supports-touch(),
-    );
-
-    // Unprefixed functions
-    $test-unprefixed: (
-        't-1': color-shade($test-color, 10),
-        't-2': color-tint($test-color, 10),
-        't-3': is-truthy('foo'),
-        't-4': list-concat($test-list, ','),
-        't-5': list-contains($test-list, foo),
-        't-6': list-expand-directions($test-list),
-        't-7': list-first($test-list),
-        't-8': list-insert-nth($test-list, 2, qux),
-        't-9': list-last($test-list),
-        't-10': list-last-index($test-list, bar),
-        't-11': list-prepend($test-list, qux),
-        't-12': list-purge($test-list),
-        't-13': list-remove($test-list, foo),
-        't-14': list-remove-nth($test-list, 1),
-        't-15': list-replace($test-list, foo, qux),
-        't-16': list-replace-nth($test-list, 1, qux),
-        't-17': list-slice($test-list, 2, 3),
-        't-18': map-assign($test-map),
-        't-19': map-deep-get($test-map, 'color'),
-        't-20': selector-get-element-name('.test'),
-        't-21': str-replace('test', 'st', 'oo'),
-        't-22': str-split('test'),
-        't-23': strip-unit(3),
-        't-24': to-string(foo),
-        't-25': transition-props('all 300ms linear'),
-        't-26': supports-hover(),
-        't-27': supports-touch(),
+    $methods: (
+        't-1': utils.color-shade($test-color, 10),
+        't-2': utils.color-tint($test-color, 10),
+        't-3': utils.is-truthy('foo'),
+        't-4': utils.list-concat($test-list, ','),
+        't-5': utils.list-contains($test-list, foo),
+        't-6': utils.list-expand-directions($test-list),
+        't-7': utils.list-first($test-list),
+        't-8': utils.list-insert-nth($test-list, 2, qux),
+        't-9': utils.list-last($test-list),
+        't-10': utils.list-last-index($test-list, bar),
+        't-11': utils.list-prepend($test-list, qux),
+        't-12': utils.list-purge($test-list),
+        't-13': utils.list-remove($test-list, foo),
+        't-14': utils.list-remove-nth($test-list, 1),
+        't-15': utils.list-replace($test-list, foo, qux),
+        't-16': utils.list-replace-nth($test-list, 1, qux),
+        't-17': utils.list-slice($test-list, 2, 3),
+        't-18': utils.map-assign($test-map),
+        't-19': utils.map-deep-get($test-map, 'color'),
+        't-20': utils.selector-get-element-name('.test'),
+        't-21': utils.str-replace('test', 'st', 'oo'),
+        't-22': utils.str-split('test'),
+        't-23': utils.strip-unit(3),
+        't-24': utils.to-string(foo),
+        't-25': utils.transition-props('all 300ms linear'),
     );
 
     $test-fixtures: (
@@ -126,17 +78,41 @@
         't-25': (),
     );
 
+    $test-expected: (
+        't-1': #0000e6,
+        't-2': #1a1aff,
+        't-3': true,
+        't-4': 'foo,bar,baz',
+        't-5': true,
+        't-6': (foo, bar, baz, bar),
+        't-7': 'foo',
+        't-8': foo qux bar baz,
+        't-9': 'baz',
+        't-10': 2,
+        't-11': (qux, foo, bar, baz),
+        't-12': foo bar baz,
+        't-13': bar baz,
+        't-14': bar baz,
+        't-15': qux bar baz,
+        't-16': qux bar baz,
+        't-17': bar baz,
+        't-18': (foo: bar),
+        't-19': null,
+        't-20': 'test',
+        't-21': 'teoo',
+        't-22': 't' 'e' 's' 't',
+        't-23': 3,
+        't-24': 'foo',
+        't-25': (),
+    );
+
     @for $i from 1 through length($test-fixtures) {
         $fixture: map-get($test-fixtures, 't-#{$i}');
-        $prefixed: map-get($test-prefixed, 't-#{$i}');
-        $unprefixed: map-get($test-unprefixed, 't-#{$i}');
+        $expected: map-get($test-expected, 't-#{$i}');
+        $test: map-get($methods, 't-#{$i}');
 
-        @if ($prefixed != $unprefixed) {
-            @error 'Comparison test ##{$i} failing! - Prefixed: #{$prefixed} ~vs~ Unprefixed: #{$unprefixed}';
-        }
-
-        @if ($prefixed != $fixture) {
-            @error 'Comparison test ##{$i} failing! - Fixture: #{$fixture} ~vs~ Prefixed: #{$prefixed}';
+        @if $test != $expected {
+            @error 'Test ##{$i} failing! - "#{$test}" != "#{$expected}"';
         }
     }
 }

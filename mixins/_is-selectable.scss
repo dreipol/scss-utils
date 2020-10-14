@@ -1,7 +1,7 @@
 /// Controls the selection style of the current element and all its children
 /// @param {boolean} $toggle - State toggle
 ///
-@mixin dp-is-selectable($toggle) {
+@mixin is-selectable($toggle) {
     $c--label-selection: #accef7 !default; // provide a fallback value
 
     @if $toggle {

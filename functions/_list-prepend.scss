@@ -4,6 +4,6 @@
 /// @param {*} $value - The term to be prepended
 /// @return {*} - The output list
 ///
-@function dp-list-prepend($list, $value) {
+@function list-prepend($list, $value) {
     @return join($value, $list);
 }

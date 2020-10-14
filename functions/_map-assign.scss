@@ -3,7 +3,7 @@
 /// @param {...Map} $maps - Any number of maps
 /// @return {Map} - The resulting map
 ///
-@function dp-map-assign($maps...) {
+@function map-assign($maps...) {
     $result: ();
 
     @each $map in $maps {

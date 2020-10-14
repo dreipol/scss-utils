@@ -1,4 +1,4 @@
-@import './is-truthy';
+@use './is-truthy' as *;
 
 /// Replace a value with another one in a list
 /// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#replacing-values-from-list
@@ -7,12 +7,12 @@
 /// @param {*} $value - The term to replace it with
 /// @return {*} - The output list
 ///
-@function dp-list-replace($list, $old-value, $value: null) {
+@function list-replace($list, $old-value, $value: null) {
     $result: ();
 
     @for $i from 1 through length($list) {
         @if nth($list, $i) == $old-value {
-            @if dp-is-truthy($value) {
+            @if is-truthy($value) {
                 $result: append($result, $value);
             }
         } @else {

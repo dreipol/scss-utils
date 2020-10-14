@@ -3,6 +3,6 @@
 /// @param {List} $list - The input list
 /// @return {*} - The list's last item
 ///
-@function dp-list-last($list) {
+@function list-last($list) {
     @return nth($list, length($list));
 }

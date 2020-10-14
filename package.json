@@ -4,7 +4,7 @@
   "description": "Dreipol scss util @functions and @mixins",
   "main": "_index.scss",
   "scripts": {
-    "test": "npm run lint && sass test.scss",
+    "test": "npm run lint && npx sass test.scss",
     "lint": "stylelint **/*.scss",
     "prepublish": "npm run test"
   },
@@ -26,13 +26,14 @@
     "url": "http://dreipol.ch"
   },
   "devDependencies": {
-    "@dreipol/stylelint-config": "^5.0.0",
-    "@dreipol/stylelint-config-bem-pattern": "^2.0.1",
-    "@dreipol/stylelint-config-order": "^3.0.0",
-    "@dreipol/stylelint-config-scss": "^2.0.1",
-    "stylelint": "^13.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.14.2",
+    "@dreipol/stylelint-config": "^7.0.0",
+    "@dreipol/stylelint-config-bem-pattern": "^3.0.0",
+    "@dreipol/stylelint-config-order": "^4.0.0",
+    "@dreipol/stylelint-config-scss": "^3.0.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "stylelint-selector-bem-pattern": "^2.1.0"
   },
   "license": "MIT",

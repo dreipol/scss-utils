@@ -2,6 +2,6 @@
 /// @param {*} $value - The input value
 /// @return {boolean} - A flag indicating if the value is truthy
 ///
-@function dp-is-truthy($value) {
+@function is-truthy($value) {
     @return if($value == null, false, $value and $value != null and $value != '' and $value != ());
 }

@@ -20,7 +20,7 @@
 ///         opacity: 1;
 ///     }
 ///
-@mixin dp-is-visible($toggle, $speed, $transition-params...) {
+@mixin is-visible($toggle, $speed, $transition-params...) {
     $transitions: ();
     $has-params: length($transition-params) > 0;
 

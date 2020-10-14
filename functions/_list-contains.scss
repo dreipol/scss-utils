@@ -2,7 +2,7 @@
 /// @param {List} $list - The haystack
 /// @param {*} $val - The needle
 ///
-@function dp-list-contains($list, $val) {
+@function list-contains($list, $val) {
     @if index($list, $val) {
         @return true;
     }

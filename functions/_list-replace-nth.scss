@@ -1,6 +1,6 @@
 // stylelint-disable scss/no-duplicate-dollar-variables
 
-@import './is-truthy';
+@use './is-truthy' as *;
 
 /// Replace a value within a list by index
 /// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#replacing-values-from-list
@@ -9,7 +9,7 @@
 /// @param {*} $value - The term to be inserted
 /// @return {*} - The output list
 ///
-@function dp-list-replace-nth($list, $index, $value: null) {
+@function list-replace-nth($list, $index, $value: null) {
     $result: null;
 
     @if type-of($index) != number {
@@ -24,7 +24,7 @@
 
         @for $i from 1 through length($list) {
             @if $i == $index {
-                @if dp-is-truthy($value) {
+                @if is-truthy($value) {
                     $result: append($result, $value);
                 }
             } @else {

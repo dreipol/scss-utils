@@ -1,4 +1,4 @@
-@import './to-string';
+@use './to-string' as *;
 
 /// Concatenate a list using a given separator
 /// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#miscellaneous
@@ -6,7 +6,7 @@
 /// @param {string} $glue - A separator string to be inserted between items
 /// @return {string} - A string containing list items connected with a separator string
 ///
-@function dp-list-concat($list, $glue: '') {
+@function list-concat($list, $glue: '') {
     $result: null;
 
     @if length($list) == 0 {

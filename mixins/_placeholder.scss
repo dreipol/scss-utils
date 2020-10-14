@@ -3,7 +3,7 @@
 
 /// Add styles to the placeholder element
 ///
-@mixin dp-placeholder() {
+@mixin placeholder() {
     &::-moz-placeholder { @content; }
     &:-ms-input-placeholder { @content; }
     &::-webkit-input-placeholder { @content; }

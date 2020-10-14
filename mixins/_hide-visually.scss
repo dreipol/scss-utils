@@ -1,6 +1,6 @@
 /// Visually hide content but leave it accessible for screen readers and search engines
 ///
-@mixin dp-hide-visually {
+@mixin hide-visually {
     position: absolute;
     overflow: hidden;
     max-width: 1px;

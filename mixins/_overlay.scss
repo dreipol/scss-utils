@@ -3,7 +3,7 @@
 /// @param {string} $root-y - A vertical spacial property keyword
 /// @param {string} $root-x - A horizontal spacial property keyword
 ///
-@mixin dp-overlay($pos: absolute, $root-y: top, $root-x: left) {
+@mixin overlay($pos: absolute, $root-y: top, $root-x: left) {
     position: $pos;
     #{$root-y}: 0;
     #{$root-x}: 0;

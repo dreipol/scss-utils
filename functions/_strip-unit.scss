@@ -2,7 +2,7 @@
 /// @param {number} $number - Number to remove unit from
 /// @return {number} - Unitless number
 ///
-@function dp-strip-unit($number) {
+@function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }

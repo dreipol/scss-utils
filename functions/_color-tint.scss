@@ -5,7 +5,7 @@
 /// @param {number} $percentage - Percentage of `$color` in returned color
 /// @return {Color}
 ///
-@function dp-color-tint($color, $percentage) {
+@function color-tint($color, $percentage) {
     @return mix(white, $color, $percentage);
 }
 

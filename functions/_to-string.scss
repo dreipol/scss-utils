@@ -3,6 +3,6 @@
 /// @param {*} $value - The original value
 /// @return {string} - The cast string
 ///
-@function dp-to-string($value) {
+@function to-string($value) {
     @return inspect($value);
 }

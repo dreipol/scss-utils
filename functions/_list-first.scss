@@ -3,6 +3,6 @@
 /// @param {List} $list - The input list
 /// @return {*} - The list's first item
 ///
-@function dp-list-first($list) {
+@function list-first($list) {
     @return nth($list, 1);
 }
