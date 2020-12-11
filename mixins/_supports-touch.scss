@@ -1,6 +1,8 @@
 @mixin dp-supports-touch() {
     /* one or more available input mechanism(s) cannot hover or there are no pointing input mechanisms */
-    @media (any-hover: none) {
+    /* or at least one input mechanism of the device includes a pointing device of limited accuracy. */
+    // see also https://css-tricks.com/touch-devices-not-judged-size/
+    @media (any-hover: none), (any-pointer: coarse) {
         @content;
     }
 }
