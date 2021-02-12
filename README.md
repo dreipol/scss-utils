@@ -1,9 +1,10 @@
-<img src="https://raw.githubusercontent.com/dreipol/scss-utils/master/logo.jpg" width="50%"/>
+<img src="https://raw.githubusercontent.com/dreipol/scss-utils/master/logo.png" width="50%"/>
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
+
 
 # scss-utils
 
@@ -14,7 +15,7 @@ dreipol scss util @functions and @mixins
 
 https://www.dreipol.dev/scss-utils/
 
-# Usage 
+# Usage
 
 ## Installation
 
@@ -33,7 +34,7 @@ a {
     @include has-focus {
         color: red;
     }
-} 
+}
 ```
 
 Notice that you can import all the mixins or functions namespacing them for example:
@@ -48,11 +49,11 @@ a {
     @include utils.has-focus {
         color: red;
     }
-} 
+}
 
 .hidden {
     @include mixins.hide-visually;
-} 
+}
 ```
 
 
