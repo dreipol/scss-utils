@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/dreipol/scss-utils/master/logo.png" width="50%"/>
+<img src="https://raw.githubusercontent.com/dreipol/scss-utils/main/logo.png" width="50%"/>
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-version-image]][npm-url]
