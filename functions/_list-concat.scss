@@ -1,7 +1,7 @@
 @use 'to-string' as *;
 
 /// Concatenate a list using a given separator
-/// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#miscellaneous
+/// @link https://kittygiraudel.com/2013/08/08/advanced-sass-list-functions/#miscellaneous
 /// @param {List} $list - The list to be concatenated
 /// @param {string} $glue - A separator string to be inserted between items
 /// @return {string} - A string containing list items connected with a separator string

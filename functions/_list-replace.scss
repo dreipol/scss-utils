@@ -1,7 +1,7 @@
 @use 'is-truthy' as *;
 
 /// Replace a value with another one in a list
-/// @link https://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/#replacing-values-from-list
+/// @link https://kittygiraudel.com/2013/08/08/advanced-sass-list-functions/#replacing-values-from-list
 /// @param {List} $list - The input list
 /// @param {*} $old-value - The term that is being replaced
 /// @param {*} $value - The term to replace it with
